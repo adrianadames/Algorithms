@@ -3,7 +3,13 @@
 import argparse
 
 def find_max_profit(prices):
-  pass 
+  for i in range(len(prices)):
+    if prices[i] > prices[i-1]:
+      max = prices[i]
+    if prices[i] < prices[i-1]:
+      min = prices[i]
+  maxProfit = max - min
+  print(maxProfit)
 
 
 if __name__ == '__main__':
@@ -15,3 +21,7 @@ if __name__ == '__main__':
   args = parser.parse_args()
 
   print("A profit of ${profit} can be made from the stock prices {prices}.".format(profit=find_max_profit(args.integers), prices=args.integers))
+
+
+
+  #Runtime complexity = O(n)
