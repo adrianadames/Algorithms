@@ -12,10 +12,9 @@ def find_max_profit(prices):
   print(maxProfit)
 
 
+
 if __name__ == '__main__':
-  # You can test your implementation by running 
-  # `python stock_prices.py [prices]` where prices is comprised of
-  # space-separated integer values
+  # This is just some code to input accepting inputs from the command line
   parser = argparse.ArgumentParser(description='Find max profit from prices.')
   parser.add_argument('integers', metavar='N', type=int, nargs='+', help='an integer price')
   args = parser.parse_args()
